@@ -1,0 +1,65 @@
+Day-01[20-12-2021]:
+===================
+	Good Morning to All....
+
+
+	Python Installation:
+	===================
+		-> python.org
+		-> windows
+		-> cntrl + f => python 3.7.5
+		-> Stable release 
+			-> downloads windows x86-64 executeable installer => for 64 bit
+			-> downloads windows x86 executeable installer => for 32 bit
+		-> Download the required bit and version of python
+
+	=> After downloading we need to double tap the software and it will displays the options as
+		-> install now
+		-> Custom installation
+		-> user permissions
+		-> add path
+	=> next to proceed for installation
+
+	Python Version Check:
+	=====================
+		-> cmd
+		-> python -V
+
+	Pip Version Check:
+	==================
+		-> cmd
+		-> pip -V
+
+	Django Installation:
+	====================
+	-> cmd
+	-> pip install django==3.0
+
+		or
+	-> pip install django==??
+
+	Upgrade pip:
+	============
+	-> python -m pip install --upgrade pip
+	-> click enter
+	-> after upgrading pip
+
+	-> Install django by using the same command as 
+		=> pip install django==3.0
+
+	Django Version Check:
+	=====================
+	-> cmd
+	-> django-admin --version
+
+	Django Project Running:
+	=======================
+	-> cmd
+	-> manage.py runserver
+	-> By default it allows the 8000 port for django server
+			or
+		If port numbers are blocked
+	** manage.py runserver 1234
+	In browser we need to pass the url as localhost:1234
+
+	
