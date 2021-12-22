@@ -1,0 +1,14 @@
+Day-03[22-12-2021]:
+===================
+	Good Morning to All..
+
+	https://github.com/AP-Skill-Development-Corporation/PBRVITS-2
+
+	Settings.py:
+	===========
+	STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
+
+	In .html to access static files style or javascript
+
+	{% load static %}
+	href="{% static 'filename.extension' %}"
