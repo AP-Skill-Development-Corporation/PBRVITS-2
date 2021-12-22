@@ -1,0 +1,56 @@
+Day-02[21-12-2021]:
+===================
+	Good Morning to All....
+
+	Templates:
+	==========
+		-> It allows only .html files
+
+	render(self,"path of .html files",dictionary)
+
+	To access the data from views we need to access  the dictionary key in .html file
+
+	DTL [Django Template Language]:
+	===============================
+	> Variable:
+		{{variable_name}}
+	> Conditional Statements
+		{% if condition %}
+			//stmnts
+		{% endif %}
+
+	if-else:
+		{% if condition %}
+			//stmnts
+		{% else %}
+			//stmnts
+		{% endif %}
+	elif:
+		{% if condition %}
+			//stmnts
+		{% elif condition %}
+			//stmnts
+		{% elif condition %}
+			//stmnts
+			|    |
+		{% elif condition(n-1) %}
+			//stmnts(n-1)
+		{% else %}
+			//stmnts
+		{% endif %}	
+	> Control Statements:
+		{% for iterationvariablename in iterator %}
+			//stmnts
+		{% endfor %}
+
+	> url access for anchor tags
+		{% url 'urlname' %}
+	> image access
+		src="{% static 'folder/imagefile.extension' %}"
+	> static files
+		{% load static %}
+
+		href="{% static 'folder/filename.extension' %}" => for css
+
+		src="{% static 'folder/filename.extension' %}" => for javascript
+	
