@@ -1,0 +1,42 @@
+Day-04[23-12-2021]:
+===================
+	Good Morning to All..
+
+	include
+	extends
+
+
+	points:
+	=======
+		-> 1 to 5
+		m-2 => for all directions with 2 points
+	margins:
+	========
+	margin-top => mt
+	margin-bottom => mb
+	margin-left => ml
+	margin-right => mr
+
+	Padding:
+	========
+	padding-top => pt
+	padding-bottom => pb
+	padding-left => pl
+	padding-right => pr
+
+	x -> left and right
+	y -> top and bottom
+
+	Colors:
+	=======
+	primary,secondary,light,warning,info,danger,success,dark
+
+	ORM:
+	====
+	O -> Object 
+	R -> Relational
+	M -> Mapper
+
+	manage.py makemigrations
+	manage.py migrate
+
