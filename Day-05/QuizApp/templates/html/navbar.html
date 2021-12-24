@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Quiz</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      {% if not user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hm' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'ab' %}">Aboutus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contactus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'us' %}">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'lg' %}">Login</a>
+      </li>
+      {% elif user.usrole == 2 %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hm' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'rgt' %}">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'v' %}">Student Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'lgo' %}">Logout</a>
+      </li>
+      {% elif user.usrole == 1 %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hm' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Student Exam</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'lgo' %}">Logout</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hm' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'lgo' %}">Logout</a>
+      </li>
+      {% endif %}    
+    </ul>
+  </div>  
+</nav>

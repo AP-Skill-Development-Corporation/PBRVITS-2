@@ -1,0 +1,20 @@
+{% extends 'html/base.html' %}
+{% block title %}Update{% endblock %}
+{% block content %}
+<div class="container mt-4">
+	<div class="card col-md-7 mx-auto shadow-lg">
+		<div class="card-body">
+			<h3>Update</h3>
+			<form method="post">
+				{% csrf_token %}
+				{% for i in n %}
+				{{i}}
+				{% endfor %}
+				<a href="{% url 'v' %}" class="btn btn-outline-info col-sm-5 form-control mx-2">Back</a>
+				<input type="submit" value="Update" class="btn btn-outline-success col-sm-5 form-control">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
+

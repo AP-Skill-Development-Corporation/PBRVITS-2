@@ -1,0 +1,36 @@
+{% extends 'html/base.html' %}
+{% block title %}Student Details{% endblock %}
+{% block content %}
+<div class="container-fluid mt-4">
+	<div class="row mx-2">
+		<div class="card col-md-3 shadow-lg mx-2 h-100">
+			<h3 class="text-light text-center bg-info mt-2 p-2 border rounded">Add Student</h3>
+			<form method="post">
+				{% csrf_token %}
+				{% for i in n %}
+				{{i}}
+				{% endfor %}
+				<input type="submit" value="Create" class="btn btn-outline-success my-2 btn-block">
+			</form>
+		</div>
+		<div class="card col-md shadow-lg">
+			<table class="table table-hover mt-2">
+				<tr class="bg-dark text-light">
+					<th>sno</th>
+					<th>Roll Number</th>
+					<th>Username</th>
+					<th>Actions</th>
+				</tr>
+				{% for t in h %}
+				<tr>
+					<td>{{forloop.counter}}</td>
+					<td>{{t.username}}</td>
+					<td>{{t.rollnumber}}</td>
+					<td><a href="{% url 'up' t.id %}" class="btn btn-outline-info mx-2">Update</a><a href="{% url 'ud' t.id %}" class="btn btn-outline-danger mx-2">Delete</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}
